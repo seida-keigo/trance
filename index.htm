@@ -456,7 +456,7 @@
 		].map(($,A)=>[document.createTextNode(A?" | ":""),Object.assign(document.createElement("a"),{
 			href:"https://www.beatport.com/search?q="+encodeURIComponent($).replaceAll("%20","+"),
 			innerText:$,
-			lang:"zh"
+			lang:"zh",
 			target:"_blank"
 		})]).flat())
 		document.querySelector("script").remove()
