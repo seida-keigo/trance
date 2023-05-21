@@ -1,14 +1,18 @@
 <meta content=width=device-width name=viewport>
 <style>
 	:root{
-		font-family:sans-serif;font-kerning:none;text-align:justify
+		font-family:arial,sans-serif;
+		font-kerning:none;
+		line-height:calc(1em + 8px);
+		text-align:justify
 	}
 	a{
 		text-decoration:none
 	}
 </style>
 <body>
-	<div></div>
+	<div>
+	</div>
 	<script>
 		document.querySelector("div").append(...[
 			"A & Z",
@@ -452,6 +456,7 @@
 		].map(($,A)=>[document.createTextNode(A?" | ":""),Object.assign(document.createElement("a"),{
 			href:"https://www.beatport.com/search?q="+encodeURIComponent($).replaceAll("%20","+"),
 			innerText:$,
+			lang:"zh"
 			target:"_blank"
 		})]).flat())
 		document.querySelector("script").remove()
