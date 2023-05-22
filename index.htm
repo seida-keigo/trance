@@ -1,5 +1,8 @@
 <meta content=width=device-width name=viewport>
 <style>
+	*{
+		font-size:inherit;
+	}
 	:root{
 		font-family:arial,sans-serif;
 		font-kerning:none;
@@ -7,18 +10,22 @@
 		text-align:justify;
 		-webkit-text-size-adjust:none
 	}
+	a{
+		text-decoration:none
+	}
 	body{
 		margin:12
 	}
-	div{
+	div,h1{
 		padding:8 12
 	}
-	a{
-		text-decoration:none
+	h1{
+		margin:initial
 	}
 </style>
 <title>Trance Artists</title>
 <body>
+	<h1>Trance Artists</h1>
 	<div>
 	</div>
 	<script>
@@ -464,12 +471,11 @@
 			"Zirenz",
 			"Zyrus 7"
 		].map(($,A)=>[document.createTextNode(A?" | ":""),Object.assign(document.createElement("a"),{
-			href:"javascript:$("+encodeURIComponent($.replace(/ \(.+\)$/,"")).replaceAll("%20","+")+")",
+			href:"https://www.beatport.com/search?q="+encodeURIComponent($.replace(/ \(.+\)$/,"")).replaceAll("%20","+"),
 			innerText:$,
 			target:"_blank"
 		})]).flat())
 		document.querySelector("script").remove()
-		const $=$=>open("https://"+(confirm("YouTube Music?")?"music.youtube.com":"www.beatport.com")+"/search?q="+$)
 	</script>
 	<div>Astrix | Burn in Noise | Dogzilla</div>
 </body>
