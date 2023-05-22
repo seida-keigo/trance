@@ -179,6 +179,7 @@
 			"Fisical Project",
 			"Flynn",
 			"Flynn & Denton",
+			"Forza:Duo",
 			"Francis Way",
 			"Frank Waanders",
 			"Frank Watson",
@@ -231,6 +232,7 @@
 			"Jonathan Carvajal",
 			"Jordan Tobias",
 			"Jordan Suckley",
+			"Jorn van Deynhoven",
 			"Joze Linecker",
 			"Kagehoshi",
 			"Karney",
@@ -354,6 +356,7 @@
 			"Rezwan Khan",
 			"Rhys Elliott",
 			"Richard Durand",
+			"Richard Tanselli",
 			"Rina Mirai",
 			"Rinaly",
 			"Rising Star",
@@ -461,11 +464,12 @@
 			"Zirenz",
 			"Zyrus 7"
 		].map(($,A)=>[document.createTextNode(A?" | ":""),Object.assign(document.createElement("a"),{
-			href:"https://www.beatport.com/search?q="+encodeURIComponent($).replaceAll("%20","+"),
+			href:"javascript:$("+encodeURIComponent($.replace(/ \(.+\)$/,"")).replaceAll("%20","+")+")",
 			innerText:$,
 			target:"_blank"
 		})]).flat())
 		document.querySelector("script").remove()
+		const $=$=>open("https://"+(confirm("YouTube Music?")?"music.youtube.com":"www.beatport.com")+"/search?q="+$)
 	</script>
 	<div>Astrix | Burn in Noise | Dogzilla</div>
 </body>
