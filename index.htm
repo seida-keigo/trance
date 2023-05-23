@@ -1,14 +1,10 @@
 <meta content=width=device-width name=viewport>
 <style>
 	*{
-		font-size:inherit;
+		font-size:inherit
 	}
 	:root{
-		font-family:arial,sans-serif;
-		font-kerning:none;
-		line-height:calc(1em + 8px);
-		text-align:justify;
-		-webkit-text-size-adjust:none
+		font-family:arial,sans-serif;font-kerning:none;line-height:calc(1em + 8px);text-align:justify;-webkit-text-size-adjust:none
 	}
 	a{
 		text-decoration:none
@@ -469,9 +465,8 @@
 		"Zyrus 7"
 	].map($=>Object.assign(document.createElement("a"),{
 		href:"https://www.beatport.com/search?q="+encodeURIComponent($.replace(/ \(.+\)$/,"")).replaceAll("%20","+"),
-		innerText:$,
+		innerText:$.replace(/ \(.+\)$/g,""),
 		target:"_blank"
-	}).outerHTML).join(" | "))
+	}).outerHTML+$.match(/ \(.+\)/g).join("")).join(" | "))
 	document.querySelector("script").remove()
 </script></div>
-<div>Astrix | Burn in Noise | Dogzilla</div>
