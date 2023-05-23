@@ -467,6 +467,6 @@
 		href:"https://www.beatport.com/search?q="+encodeURIComponent($.replace(/ \(.+\)$/,"")).replaceAll("%20","+"),
 		innerText:$.replace(/ \(.+\)$/g,""),
 		target:"_blank"
-	}).outerHTML+$.match(/ \(.+\)/g)?.join("")??"").join(" | "))
+	}).outerHTML+$.match(/ \(.+\)$/g)?.[0]??"").join(" | "))
 	document.querySelector("script").remove()
 </script></div>
